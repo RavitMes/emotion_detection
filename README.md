@@ -14,7 +14,7 @@ The Test Metrics: A simple accuracy metric could be used for the emotion detecti
 **The Data:** Extended Cohn-Kanade Dataset 
  
  
- ### generating pictures of flowers
+ ### Generating Pictures of Flowers
 **The problem:** creating new pictures of flowers, that can be adjusted based on specific characteristics (such as color and petal length) - for art and decoration perpuses - is time consuming and costly.
 
 **Solution:** based on this video (watch seconds 5:50 - 6:20): https://www.youtube.com/watch?v=4VAkrUNLKSo&t=399s
