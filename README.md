@@ -1,9 +1,4 @@
 Israel Tech Challenge Data Science Fellows Fall 20219 Final Project 
-
-Project ideas:
-1. rienforcent learning: teach the computer to plat the 2D game icy tower
-2. generative model: based on this video: https://www.youtube.com/watch?v=4VAkrUNLKSo
-but with nature sceneries
  
  #### Real-Time Emotion Detection and Intervension
 **The problem:** People are finding themselves in a downward spiral on the internet where they are doing things that hurt their mental health. There is no way of accurately assessing a users mental state in order to take steps to help them.
@@ -19,5 +14,27 @@ The Test Metrics: A simple accuracy metric could be used for the emotion detecti
 **The Data:** Extended Cohn-Kanade Dataset 
  
  
- 
-GUYS ADD YOUR IDEAS WITH SHORT DESCRIPTION HERE :)
+ #### generating pictures of flowers
+**The problem:** creating new pictures of flowers, that can be adjusted based on specific characteristics (such as color and petal length) - for art and decoration perpuses - is time consuming and costly.
+
+**Solution:** based on this video (watch seconds 5:50 - 6:20): https://www.youtube.com/watch?v=4VAkrUNLKSo&t=399s
+the idea is to create a deep encoder that can characteristics of flowers from a latent feature space that is found using PCA and transform
+them into an actual picture. changing the values of the latent space vector can control the characteristics of the flower. 
+
+this project will have several stages:
+ 1. web scraping to enrich the flower pictures dataset.
+ 2. data preprocessing to make sure all pics have same shape and that flower is in the middle
+ 3. training the model
+ 4. building a simple GUI to help generating the flowers and changing its characteristics in a convenient way.
+
+it can be extedened in the following ways:
+1. using GANs to get more realistic results
+2. using a more varialbe set of pictures (nature sceneries instead of flowers, for example)
+
+**The Data:** https://www.kaggle.com/alxmamaev/flowers-recognition contains more than 4000 pictures of flowers. this dataset can be enriched by scraping google images
+
+**metrics:** MSE between pixel values of original image and reconstructed image. also, we can see if the images the encoder outputs looks
+realistic or not. 
+
+
+
