@@ -4,7 +4,9 @@ Project ideas:
 1. rienforcent learning: teach the computer to plat the 2D game icy tower
 2. generative model: based on this video: https://www.youtube.com/watch?v=4VAkrUNLKSo
 but with nature sceneries
-3. **The problem:** People are finding themselves in a downward spiral on the internet where they are doing things that hurt their mental health. There is no way of accurately assessing a users mental state in order to take steps to help them.
+ 
+ ####Real-Time Emotion Detection and Intervension
+**The problem:** People are finding themselves in a downward spiral on the internet where they are doing things that hurt their mental health. There is no way of accurately assessing a users mental state in order to take steps to help them.
 
 **Solution:** One of our ideas aims to recreate and improve on the accuracy and scope of emotion detection using a live feed instead of a single image like was done in previous projects. The idea would be to take a live feed from a user’s web camera and run an algorithm in the background that labels that users current mood in real time. 
 
