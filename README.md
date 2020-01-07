@@ -1,6 +1,6 @@
 Israel Tech Challenge Data Science Fellows Fall 20219 Final Project 
  
- #### Real-Time Emotion Detection and Intervension
+ ### Real-Time Emotion Detection and Intervension
 **The problem:** People are finding themselves in a downward spiral on the internet where they are doing things that hurt their mental health. There is no way of accurately assessing a users mental state in order to take steps to help them.
 
 **Solution:** One of our ideas aims to recreate and improve on the accuracy and scope of emotion detection using a live feed instead of a single image like was done in previous projects. The idea would be to take a live feed from a user’s web camera and run an algorithm in the background that labels that users current mood in real time. 
@@ -14,7 +14,7 @@ The Test Metrics: A simple accuracy metric could be used for the emotion detecti
 **The Data:** Extended Cohn-Kanade Dataset 
  
  
- #### generating pictures of flowers
+ ### generating pictures of flowers
 **The problem:** creating new pictures of flowers, that can be adjusted based on specific characteristics (such as color and petal length) - for art and decoration perpuses - is time consuming and costly.
 
 **Solution:** based on this video (watch seconds 5:50 - 6:20): https://www.youtube.com/watch?v=4VAkrUNLKSo&t=399s
