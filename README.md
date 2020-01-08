@@ -36,5 +36,8 @@ it can be extedened in the following ways:
 **metrics:** MSE between pixel values of original image and reconstructed image. also, we can see if the images the encoder outputs looks
 realistic or not. 
 
+**plan for three weeks** :we will build a POC, with low resolution and small number of pictures and encoder layers - just to show that the idea works. afterwards we can improve further on it.
 
+**possible problems**: we might discover that the picture space is two big and will have to choose a diffrent kind of pictures with more
+structure. 
 
