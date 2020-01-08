@@ -1,5 +1,6 @@
 Israel Tech Challenge Data Science Fellows Fall 20219 Final Project 
- 
+Olga, Moran, Ravit, Jake
+
  ### Real-Time Emotion Detection and Intervension
 **The problem:** People are finding themselves in a downward spiral on the internet where they are doing things that hurt their mental health. There is no way of accurately assessing a users mental state in order to take steps to help them.
 
