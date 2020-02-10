@@ -30,20 +30,24 @@ function DOMtoString(document_root) {
 }
 
 function sendHTML(html) {
-    const api_url = 'OUR_SENTIMENT_API_PATH';
+    const api_url = 'http://127.0.0.1:5000/sentiment/';
 
     fetch(api_url, {
       method: 'POST',
-      body: JSON.stringify(html),
-      headers:{
-        'Content-Type': 'application/json'
-      } })
-    .then(data => { return response.json() })
+      body: JSON.stringify(html), })
+    // .then((resp) =>
+    //     console.log(resp))
+
+    .then((response) => response.json())
+    .then((result) => {
+        console.log(result);
+})
+        // if (parseInt(resp.data.sentiment_score) < 0) {
+        //     alert("STOP READING THIS!!!!!!!!");
+        // })
     // If we want to black out words - look at this example: https://towardsdatascience.com/building-a-serverless-chrome-extension-f684740e1ffc
     .catch(error => console.error('Error:', error)); 
-    var parsed_data = JSON.parse(data)
-    if (parseInt(parsed_data.sentiment_score) < 0) {
-        alert("STOP READING THIS!!!!!!!!");
+
 }
 
 
