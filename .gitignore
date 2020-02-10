@@ -134,3 +134,6 @@ dmypy.json
 # private
 private/
 
+conf.py
+*.h5
+text_sent_key.json

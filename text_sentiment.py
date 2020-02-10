@@ -34,11 +34,10 @@ class TextSentiment:
 
     def __init__(self):
         self.client = language.LanguageServiceClient()
-        self.sentiment = [('negative', -0.3), ('Neutral', 0.3), ('positive', 1)]
         self.doc_type = 'HTML'
 
     @staticmethod
-    def _get_url_text(url):
+    def _get_url_text(html):
         """
         The function receives the URL and extracts text from it.
         :param url: url of web page
@@ -46,10 +45,10 @@ class TextSentiment:
         :return: content of the web page
         :rtype: string
         """
-        resp = requests.get(url)
-        soup = BeautifulSoup(resp.text, 'lxml')
+        # resp = requests.get(url)
+        soup = BeautifulSoup(html, 'lxml')
         data = soup.get_text()
-        return data
+        return data[:99999]
 
     def analyze(self, text):
         """
@@ -73,19 +72,14 @@ class TextSentiment:
         :return: the label of the sentiment score
         :rtype: string
         """
-        sentiment = ''
+        sentiment_score = 0
         try:
             text = self._get_url_text(url)
             sentiment_score, _ = self.analyze(text)
-            for s_score in self.sentiment:
-                if sentiment_score < s_score[self._sent_score]:
-                    sentiment = s_score[self._sent_label]
-                    break
-            print(sentiment_score)
-
+            
         except requests.exceptions.HTTPError as err:
             print(f'Error: {err}')
         except Exception as err:
             print(f'Error: {err}')
 
-        return sentiment
+        return sentiment_score

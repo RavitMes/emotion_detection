@@ -1,6 +1,3 @@
-// @author Rob W <http://stackoverflow.com/users/938089/rob-w>
-// Demo: var serialized_html = DOMtoString(document);
-
 function DOMtoString(document_root) {
     var html = '',
         node = document_root.firstChild;
@@ -30,21 +27,19 @@ function DOMtoString(document_root) {
 }
 
 function sendHTML(html) {
+
     const api_url = 'http://127.0.0.1:5000/sentiment/';
 
     fetch(api_url, {
       method: 'POST',
       body: JSON.stringify(html), })
-    // .then((resp) =>
-    //     console.log(resp))
-
     .then((response) => response.json())
     .then((result) => {
-        console.log(result);
+
+        if (parseInt(result.sentiment_score) < 0) {
+            alert("STOP READING THIS!!!!!!!!");
+        }
 })
-        // if (parseInt(resp.data.sentiment_score) < 0) {
-        //     alert("STOP READING THIS!!!!!!!!");
-        // })
     // If we want to black out words - look at this example: https://towardsdatascience.com/building-a-serverless-chrome-extension-f684740e1ffc
     .catch(error => console.error('Error:', error)); 
 
