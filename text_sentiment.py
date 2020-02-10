@@ -41,9 +41,10 @@ class TextSentiment:
     def _get_url_text(url):
         """
         The function receives the URL and extracts text from it.
-        :param url:
-        :return:
-        :rtype:
+        :param url: url of web page
+        :type url: string
+        :return: content of the web page
+        :rtype: string
         """
         resp = requests.get(url)
         soup = BeautifulSoup(resp.text, 'lxml')
