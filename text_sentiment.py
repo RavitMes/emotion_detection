@@ -40,15 +40,25 @@ class TextSentiment:
     def _get_url_text(html):
         """
         The function receives the URL and extracts text from it.
-        :param url: url of web page
-        :type url: string
+        Source code: https://stackoverflow.com/questions/22799990/beatifulsoup4-get-text-still-has-javascript
+        :param html: web page content
+        :type html: string
         :return: content of the web page
         :rtype: string
         """
-        # resp = requests.get(url)
         soup = BeautifulSoup(html, 'lxml')
-        data = soup.get_text()
-        return data[:99999]
+        # clean all script and style elements
+        for script in soup(["script", "style"]):
+            script.decompose()
+
+        text = soup.get_text()
+        # break into lines and remove leading and trailing space on each
+        lines = (line.strip() for line in text.splitlines())
+        # break multi-headlines into a line each
+        chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+        # drop blank lines
+        text = '\n'.join(chunk for chunk in chunks if chunk)
+        return text
 
     def analyze(self, text):
         """
