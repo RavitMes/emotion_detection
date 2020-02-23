@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Intellij IDE
+.idea/
+
+# private
+private/
+
+conf.py
+*.h5
+text_sent_key.json
